@@ -1,0 +1,25 @@
+{
+    "voucher": [
+        {
+            "id": 1,
+            "limit": "10 hours",
+            "devices": "2",
+            "data": "20Gb",
+            "total": "20.000"
+        },
+        {
+            "id": 2,
+            "limit": "12 hours",
+            "devices": "3",
+            "data": "30Gb",
+            "total": "30.000"
+        },
+        {
+            "id": 3,
+            "limit": "24 hours",
+            "devices": "6",
+            "data": "70Gb",
+            "total": "50.000"
+        }
+    ]
+}

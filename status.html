@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title"></title>
+    <meta name="theme-color" content="" id="themeColor" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="" id="favicon">
+    <!-- Speed Test CSS -->
+    <link rel="stylesheet" href="speed-js/speedcheck-basic.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/css-bs-5/bootstrap.min.css">
+    <!-- General CSS -->
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="login.html">
+                <img src="static/img/brand/pondenet.svg" alt="">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu text-white">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link menu-item" href="about.html">About us</a>
+                    <a class="nav-link menu-item" href="package.html">Package</a>
+                    <a class="nav-link menu-item" href="services.html">Services</a>
+                </div>
+                <a onclick="redirectToWhatsApp()" class="btn btn-light d-md d-block">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section here -->
+    <section class="hero-status"></section>
+
+
+    <!-- Section form -->
+    <section class="card-status container px-4">
+        <div class="account-login mb__48">
+            <div class="user-grett"><span id="greeting"></span>, <span class="username">$(username)</span></div>
+            <p>Selamat menikmati hidangan internet kami :)</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-12">
+                <div class="card shadow-2xl border-0 mt-4">
+                    <div class="card-body">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_22_3852)">
+                                <path
+                                    d="M33 16.5C33 12.1239 31.2616 7.92709 28.1673 4.83274C25.0729 1.73839 20.8761 0 16.5 0C12.1239 0 7.92709 1.73839 4.83274 4.83274C1.73839 7.92709 0 12.1239 0 16.5C0 20.8761 1.73839 25.0729 4.83274 28.1673C7.92709 31.2616 12.1239 33 16.5 33C20.8761 33 25.0729 31.2616 28.1673 28.1673C31.2616 25.0729 33 20.8761 33 16.5ZM17.5312 23.7188C17.5312 23.9923 17.4226 24.2546 17.2292 24.448C17.0358 24.6414 16.7735 24.75 16.5 24.75C16.2265 24.75 15.9642 24.6414 15.7708 24.448C15.5774 24.2546 15.4688 23.9923 15.4688 23.7188V11.7707L11.0426 16.1989C10.849 16.3925 10.5864 16.5013 10.3125 16.5013C10.0386 16.5013 9.77602 16.3925 9.58237 16.1989C9.38873 16.0052 9.27995 15.7426 9.27995 15.4688C9.27995 15.1949 9.38873 14.9323 9.58237 14.7386L15.7699 8.55112C15.8657 8.45509 15.9795 8.37889 16.1048 8.32691C16.23 8.27492 16.3644 8.24816 16.5 8.24816C16.6356 8.24816 16.77 8.27492 16.8952 8.32691C17.0205 8.37889 17.1343 8.45509 17.2301 8.55112L23.4176 14.7386C23.6113 14.9323 23.7201 15.1949 23.7201 15.4688C23.7201 15.7426 23.6113 16.0052 23.4176 16.1989C23.224 16.3925 22.9613 16.5013 22.6875 16.5013C22.4137 16.5013 22.151 16.3925 21.9574 16.1989L17.5312 11.7707V23.7188Z"
+                                    fill="#FFA500" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_22_3852">
+                                    <rect width="33" height="33" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="label-status mt__24 mb__8">Upload</div>
+                        <div class="data-status">$(bytes-out-nice)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-12">
+                <div class="card shadow-2xl border-0 mt-4">
+                    <div class="card-body">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_22_3859)">
+                                <path
+                                    d="M33 16.5C33 20.8761 31.2616 25.0729 28.1673 28.1673C25.0729 31.2616 20.8761 33 16.5 33C12.1239 33 7.92709 31.2616 4.83274 28.1673C1.73839 25.0729 0 20.8761 0 16.5C0 12.1239 1.73839 7.92709 4.83274 4.83274C7.92709 1.73839 12.1239 0 16.5 0C20.8761 0 25.0729 1.73839 28.1673 4.83274C31.2616 7.92709 33 12.1239 33 16.5ZM17.5312 9.28125C17.5312 9.00775 17.4226 8.74544 17.2292 8.55205C17.0358 8.35865 16.7735 8.25 16.5 8.25C16.2265 8.25 15.9642 8.35865 15.7708 8.55205C15.5774 8.74544 15.4688 9.00775 15.4688 9.28125V21.2293L11.0426 16.8011C10.849 16.6075 10.5864 16.4987 10.3125 16.4987C10.0386 16.4987 9.77602 16.6075 9.58237 16.8011C9.38873 16.9948 9.27995 17.2574 9.27995 17.5312C9.27995 17.8051 9.38873 18.0677 9.58237 18.2614L15.7699 24.4489C15.8657 24.5449 15.9795 24.6211 16.1048 24.6731C16.23 24.7251 16.3644 24.7518 16.5 24.7518C16.6356 24.7518 16.77 24.7251 16.8952 24.6731C17.0205 24.6211 17.1343 24.5449 17.2301 24.4489L23.4176 18.2614C23.6113 18.0677 23.7201 17.8051 23.7201 17.5312C23.7201 17.2574 23.6113 16.9948 23.4176 16.8011C23.224 16.6075 22.9613 16.4987 22.6875 16.4987C22.4137 16.4987 22.151 16.6075 21.9574 16.8011L17.5312 21.2293V9.28125Z"
+                                    fill="#016BD9" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_22_3859">
+                                    <rect width="33" height="33" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <div class="label-status mt__24 mb__8">Download</div>
+                        <div class="data-status">$(bytes-in-nice)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-12">
+                <div class="card shadow-2xl border-0 mt-4">
+                    <div class="card-body">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_22_3867)">
+                                <path
+                                    d="M4.125 4.125C3.03098 4.125 1.98177 4.5596 1.20818 5.33318C0.434597 6.10677 0 7.15598 0 8.25L0 10.3125C0 11.4065 0.434597 12.4557 1.20818 13.2293C1.98177 14.0029 3.03098 14.4375 4.125 14.4375H15.4688V20.625C14.6482 20.625 13.8613 20.9509 13.2811 21.5311C12.7009 22.1113 12.375 22.8982 12.375 23.7188H1.03125C0.757746 23.7188 0.495443 23.8274 0.302046 24.0208C0.108649 24.2142 0 24.4765 0 24.75C0 25.0235 0.108649 25.2858 0.302046 25.4792C0.495443 25.6726 0.757746 25.7812 1.03125 25.7812H12.375C12.375 26.6018 12.7009 27.3887 13.2811 27.9689C13.8613 28.5491 14.6482 28.875 15.4688 28.875H17.5312C18.3518 28.875 19.1387 28.5491 19.7189 27.9689C20.2991 27.3887 20.625 26.6018 20.625 25.7812H31.9688C32.2423 25.7812 32.5046 25.6726 32.698 25.4792C32.8913 25.2858 33 25.0235 33 24.75C33 24.4765 32.8913 24.2142 32.698 24.0208C32.5046 23.8274 32.2423 23.7188 31.9688 23.7188H20.625C20.625 22.8982 20.2991 22.1113 19.7189 21.5311C19.1387 20.9509 18.3518 20.625 17.5312 20.625V14.4375H28.875C29.969 14.4375 31.0182 14.0029 31.7918 13.2293C32.5654 12.4557 33 11.4065 33 10.3125V8.25C33 7.15598 32.5654 6.10677 31.7918 5.33318C31.0182 4.5596 29.969 4.125 28.875 4.125H4.125ZM5.15625 10.3125C4.88275 10.3125 4.62044 10.2039 4.42705 10.0105C4.23365 9.81706 4.125 9.55475 4.125 9.28125C4.125 9.00775 4.23365 8.74544 4.42705 8.55205C4.62044 8.35865 4.88275 8.25 5.15625 8.25C5.42975 8.25 5.69206 8.35865 5.88545 8.55205C6.07885 8.74544 6.1875 9.00775 6.1875 9.28125C6.1875 9.55475 6.07885 9.81706 5.88545 10.0105C5.69206 10.2039 5.42975 10.3125 5.15625 10.3125ZM9.28125 10.3125C9.00775 10.3125 8.74544 10.2039 8.55205 10.0105C8.35865 9.81706 8.25 9.55475 8.25 9.28125C8.25 9.00775 8.35865 8.74544 8.55205 8.55205C8.74544 8.35865 9.00775 8.25 9.28125 8.25C9.55475 8.25 9.81706 8.35865 10.0105 8.55205C10.2039 8.74544 10.3125 9.00775 10.3125 9.28125C10.3125 9.55475 10.2039 9.81706 10.0105 10.0105C9.81706 10.2039 9.55475 10.3125 9.28125 10.3125Z"
+                                    fill="#EE1D52" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_22_3867">
+                                    <rect width="33" height="33" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <div class="label-status mt__24 mb__8">IP Address</div>
+                        <div class="data-status">$(ip)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="information container mt__64 mb__48 px-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="title-info">Informasi lengkap</div>
+                <div class="d-flex info-items bg-info-user align-items-center mb__8 mt__32">
+                    <span class="label-info">Username</span>
+                    <span class="value-info ms-auto">$(username)</span>
+                </div>
+                <div class="d-flex info-items bg-info-user align-items-center mb__8">
+                    <span class="label-info">Sisa kuota</span>
+                    <span class="value-info ms-auto">
+                        $(if limit-bytes-total)
+                        <script language="javascript">result = ($(limit - bytes - total) / 1000000).toFixed(2)
+                            document.write(result)</script> MiB
+                        $(endif)
+                        $(if limit-bytes-total == '')Unlimited$(endif)
+                    </span>
+                </div>
+                <div class="d-flex info-items bg-info-user align-items-center mb__8">
+                    <span class="label-info">Ip Address</span>
+                    <span class="value-info ms-auto">$(ip)</span>
+                </div>
+                <div class="d-flex info-items bg-info-user align-items-center mb__8">
+                    <span class="label-info">Status refresh</span>
+                    <span class="value-info ms-auto">$(refresh-timeout)</span>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="title-info tti-md">Cek kecepetan internet</div>
+                <div class="card card-speed mt__32">
+                    <div class="card-body">
+                        <div id="sc-container" class="text-center">
+                            <div id="sc-branding" class="sc-bb">
+                                <a target="_blank" href="https://www.pondenet.com">
+                                    <img src="#" alt="Speedcheck" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="logout.html?erase-cookie=true" class="btn btn-primary d-md d-block mt__32">Logout</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library JS -->
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="static/js/js-bs-5/bootstrap.min.js"></script>
+    <!-- General JS -->
+    <script src="static/js/app.js"></script>
+    <!-- Speed Test JS -->
+    <script src="speed-js/scbjs.min.js" async></script>
+    <script>
+        var myDate = new Date();
+        var hrs = myDate.getHours();
+        var greet;
+        if (hrs < 12) {
+            greet = 'Good morning';
+        } else if (hrs >= 12 && hrs <= 17) {
+            greet = 'Good afternoon';
+        } else {
+            greet = 'Good night';
+        }
+        document.getElementById('greeting').innerHTML = greet;
+
+    </script>
+
+</body>
+
+</html>

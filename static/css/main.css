@@ -1,0 +1,1920 @@
+/*!
+ * amfibi  v1.0.0 (https://pondenet.com/)
+ * Copyright 2023 The Pondenet Authors
+ * Licensed under MIT (https://github.com/designwitharifin)
+ */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Typography
+*-----------------------------------------------------------------------------------------------
+* Use typography to present your design and content as clearly and efficiently as possible. 
+* Download fonts on https: //fonts.google.com/specimen/Inter
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {
+
+    /* <-Font family-> */
+    --font-headline: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.vr {
+    opacity: 100;
+}
+
+.vr-cs {
+    font-size: 32px !important;
+    margin-top: -0.4rem;
+}
+
+
+/* Setting Gutter */
+
+/* Tablet'ish devices */
+@media (min-width: 547px) and (max-width: 767px) {
+
+    .row>.col,
+    .row>[class*="col"] {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 546px) {
+
+    .row>.col,
+    .row>[class*="col"] {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Color Guidance
+*-----------------------------------------------------------------------------------------------
+* See design guideline for color and interaction states
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {
+
+    /* <-Base color-> */
+    --black: #1E2022;
+    --white: #FFFFFF;
+    --primary: #016BD9;
+    --warning: #FCD746;
+    --negative: #EF4444;
+    --positive: #00E676;
+
+    --primary-50: #ecfbff;
+    --primary-100: #d4f4ff;
+    --primary-200: #b2eeff;
+    --primary-300: #7ee5ff;
+    --primary-400: #41d3ff;
+    --primary-500: #16b5ff;
+    --primary-600: #0095ff;
+    --primary-700: #007dfd;
+    --primary-800: #016bd9;
+    --primary-900: #0857a0;
+    --primary-950: #0b3460;
+
+    --gray-1: #818181;
+    --gray-2: #E1E1E1;
+    --gray-3: #F4F7FE;
+
+    --body: #FDFEFF;
+    --yellow: #FFA500;
+    --red: #EE1D52;
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Elevation
+*-----------------------------------------------------------------------------------------------
+* Elevation can be depicted using shadows or other visual cues,
+* such as surface fills or opacities.
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {
+
+    /* <-Smooth elevation-> */
+    --shadow-sm: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    --shadow-2xl: 0px 17px 100px rgba(1, 15, 29, 0.08);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Font family 
+*-----------------------------------------------------------------------------------------------
+* Font family setup
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Font Outfit */
+/* latin-ext */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('../font/outfit/QGYvz_MVcBeNP4NJuktqQ4E.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('../font/outfit/QGYvz_MVcBeNP4NJtEtq.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/outfit/QGYvz_MVcBeNP4NJuktqQ4E.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/outfit/QGYvz_MVcBeNP4NJtEtq.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/outfit/QGYvz_MVcBeNP4NJuktqQ4E.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/outfit/QGYvz_MVcBeNP4NJtEtq.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Font Inter */
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7SUc.woff2') format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7SUc.woff2') format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7SUc.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    unicode-range: U+0100-02AF, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../font/Inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Background 
+*-----------------------------------------------------------------------------------------------
+* Backgorund color setup
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--slate-500) !important;
+}
+
+.bg-success {
+    background-color: var(--positive) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning) !important;
+}
+
+.bg-danger {
+    background-color: var(--negative) !important;
+}
+
+.bg-dark {
+    background-color: var(--slate-900) !important;
+}
+
+.bg-gray-100 {
+    background-color: var(--gray-100);
+}
+
+.bg-lightgray {
+    background-color: var(--gray-3) !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* COMPONENTS --> Button
+*-----------------------------------------------------------------------------------------------
+* Buttons help people take actions,such as sending an email,sharing a document,or liking a 
+* comment.
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.btn {
+    padding: 18px 34px !important;
+    border-radius: 100px !important;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    overflow: hidden;
+    transition: all .2s !important;
+}
+
+.btn-md {
+    padding: 14px 32px !important;
+    border-radius: 100px !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    overflow: hidden;
+    transition: all .2s !important;
+}
+
+a.btn {
+    text-decoration: none !important;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-800) !important;
+    border: 2px solid var(--primary-800) !important;
+    opacity: 88%;
+}
+
+.btn-primary:focus {
+    background-color: var(--primary-700) !important;
+    border: 2px solid var(--primary-700) !important
+}
+
+.btn-secondary {
+    background-color: var(--gray-3);
+    color: var(--black);
+    border: 2px solid var(--gray-3);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-3) !important;
+    border: 2px solid var(--gray-3) !important;
+    color: var(--black) !important;
+    opacity: 88%;
+}
+
+.btn-secondary:focus {
+    color: var(--black);
+    background-color: var(--gray-3) !important;
+    border: 2px solid var(--gray-3) !important
+}
+
+a.btn-outline-primary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+button.btn-outline-primary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--slate-100) !important;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary);
+}
+
+.btn-outline-primary:focus {
+    border-color: 2px var(--blue-700);
+}
+
+.btn-outline-light {
+    border: 2px solid var(--gray-200);
+    color: var(--gray-500);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--white) !important;
+    color: var(--gray-500) !important;
+    border: 2px solid var(--gray-200);
+}
+
+.btn-outline-light:focus {
+    border-color: 2px var(--gray-200);
+}
+
+.btn-primary.disabled {
+    background-color: var(--slate-200) !important;
+    color: var(--slate-700);
+    border: 2px solid var(--slate-200);
+}
+
+.btn-outline-primary.disabled {
+    color: var(--slate-700);
+    border: 2px solid var(--slate-200);
+}
+
+.btn-text-primary {
+    color: var(--primary);
+    border: 2px solid var(--white);
+}
+
+.btn-text-primary:hover {
+    color: var(--primary) !important;
+    background-color: var(--slate-100) !important;
+    border: 2px solid var(--slate-100) !important;
+}
+
+.btn-text-primary:focus {
+    color: var(--primary) !important;
+    background-color: var(--slate-200) !important;
+    border: 2px solid var(--slate-200) !important;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-light {
+    background-color: var(--white);
+}
+
+.btn-light:hover {
+    background-color: var(--gray-3) !important;
+    border: 1px solid var(--white);
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Navbar
+*-----------------------------------------------------------------------------------------------
+* Navbar styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.navbar {
+    padding: 25px 0;
+}
+
+.menu-item {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.menu-item {
+    margin: 0 24px;
+}
+
+.nav-link:hover {
+    color: var(--gray-2);
+}
+
+.tab {
+    color: var(--gray-1);
+}
+
+.tab:hover {
+    color: var(--black);
+}
+
+.nav-pills .nav-link.active {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Hero
+*-----------------------------------------------------------------------------------------------
+* Hero styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+section.hero {
+    background: url('../img/landscape-hero.png') center center / cover no-repeat,
+        var(--primary);
+    background-position-y: 3.6rem;
+    padding: 10rem 0;
+    background-size: contain;
+}
+
+section.hero-status {
+    background: url('../img/bg-status.png') center center / cover no-repeat,
+        var(--primary);
+    background-position-y: 3.6rem;
+    padding: 8rem 0;
+    background-size: contain;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Empty state --> for empty style css
+*-----------------------------------------------------------------------------------------------
+* STyling every empty state here
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.title-empty-state {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    color: var(--white);
+    font-family: var(--font-headline);
+}
+
+
+.lead-empty-state {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Effecf --> Ripple
+*-----------------------------------------------------------------------------------------------
+* Give some effect like material design
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .2;
+    transition: 0s
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Effecf --> elevations
+*-----------------------------------------------------------------------------------------------
+* Elevation can be depicted using shadows or other visual cues,
+* such as surface fills or opacities.
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* <-Smooth elevation-> */
+.shadow-sm {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-2xl {
+    box-shadow: var(--shadow-2xl) !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Spacing 
+*-----------------------------------------------------------------------------------------------
+* Give consistency space between a components or elements
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* <-Padding bottom-> */
+.pb__2 {
+    padding-bottom: 2px;
+}
+
+.pb__4 {
+    padding-bottom: 4px;
+}
+
+.pb__8 {
+    padding-bottom: 8px;
+}
+
+.pb__12 {
+    padding-bottom: 12px;
+}
+
+.pb__16 {
+    padding-bottom: 16px;
+}
+
+.pb__24 {
+    padding-bottom: 24px;
+}
+
+.pb__32 {
+    padding-bottom: 32px;
+}
+
+.pb__48 {
+    padding-bottom: 48px;
+}
+
+.pb__64 {
+    padding-bottom: 64px;
+}
+
+.pb__96 {
+    padding-bottom: 96px;
+}
+
+.pb__128 {
+    padding-bottom: 128px;
+}
+
+/* <-Padding top-> */
+.pt__2 {
+    padding-top: 2px;
+}
+
+.pt__4 {
+    padding-top: 4px;
+}
+
+.pt__8 {
+    padding-top: 8px;
+}
+
+.pt__16 {
+    padding-top: 16px;
+}
+
+.pt__24 {
+    padding-top: 24px;
+}
+
+.pt__32 {
+    padding-top: 32px;
+}
+
+.pt__48 {
+    padding-top: 48px;
+}
+
+.pt__64 {
+    padding-top: 64px;
+}
+
+.pt__96 {
+    padding-top: 96px;
+}
+
+.pt__128 {
+    padding-top: 128px;
+}
+
+/* <-Margin bottom-> */
+.mb__2 {
+    margin-bottom: 2px;
+}
+
+.mb__4 {
+    margin-bottom: 4px;
+}
+
+.mb__8 {
+    margin-bottom: 8px;
+}
+
+.mb__12 {
+    margin-bottom: 12px;
+}
+
+.mb__16 {
+    margin-bottom: 16px;
+}
+
+.mb__24 {
+    margin-bottom: 24px;
+}
+
+.mb__32 {
+    margin-bottom: 32px;
+}
+
+.mb__48 {
+    margin-bottom: 48px;
+}
+
+.mb__64 {
+    margin-bottom: 64px;
+}
+
+.mb__96 {
+    margin-bottom: 96px;
+}
+
+.mb__128 {
+    margin-bottom: 128px;
+}
+
+/* <-Margin top-> */
+.mt__2 {
+    margin-top: 2px;
+}
+
+.mt__4 {
+    margin-top: 4px;
+}
+
+.mt__8 {
+    margin-top: 8px;
+}
+
+.mt__16 {
+    margin-top: 16px;
+}
+
+.mt__24 {
+    margin-top: 24px;
+}
+
+.mt__32 {
+    margin-top: 32px;
+}
+
+.mt__48 {
+    margin-top: 48px;
+}
+
+.mt__64 {
+    margin-top: 64px;
+}
+
+.mt__96 {
+    margin-top: 96px;
+}
+
+.mt__128 {
+    margin-top: 128px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Form card
+*-----------------------------------------------------------------------------------------------
+* Setup form card
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.form-action {
+    margin-top: -20rem;
+}
+
+.form-action .card,
+.card-about .card {
+    border-radius: 22px;
+}
+
+.form-action .card-body {
+    padding: 38px 37px;
+}
+
+.header-form .title-header {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45px;
+    color: var(--black);
+    font-family: var(--font-headline);
+}
+
+.header-form .desc-header {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--gray-1);
+}
+
+.story {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 50px;
+    color: var(--black);
+    font-family: var(--font-headline);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Text field
+*-----------------------------------------------------------------------------------------------
+* Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.form-label {
+    font-size: var(--body-2);
+    line-height: var(--line-height-20);
+    font-weight: var(--regular-400);
+    color: var(--gray-900);
+}
+
+.form-control,
+.form-select {
+    padding: 18px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--black);
+    border-radius: 100px;
+    border: 2px solid var(--gray-2);
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+    color: var(--gray-1) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border: 2px solid var(--primary) !important;
+    color: var(--primary) !important;
+    box-shadow: none;
+}
+
+input::placeholder {
+    color: var(--gray-400) !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Layout setup
+*-----------------------------------------------------------------------------------------------
+* Layout setup for mobile device
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* <-Some CSS Setup - nothing to do with flexbox-> */
+html {
+    box-sizing: border-box;
+    transition: transform .5s, opacity 1s
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--body);
+}
+
+.app-wrap {
+    width: 100%;
+    max-width: 480px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    min-height: calc(100vh - 40px);
+}
+
+.content {
+    background-color: var(--white);
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-wrap>* {
+    flex: 1 1 auto;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Tabs
+*-----------------------------------------------------------------------------------------------
+* Tabs organize and support navigation between groups of related content at the same level of 
+* hierarchy.
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    box-shadow: var(--shadow-md);
+}
+
+.bg-nav-pills-light {
+    background-color: var(--gray-100);
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Nav borders
+*-----------------------------------------------------------------------------------------------
+* Styling for auth page
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.nav-borders .nav-link {
+    color: var(--gray-400);
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    width: 50%;
+    text-align: center;
+
+}
+
+.nav-borders .nav-link.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.nav-borders.flex-column .nav-link.active {
+    border-right-color: var(--primary);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* log in member & voucher page - login.html
+*-----------------------------------------------------------------------------------------------
+* Styling for auth page
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* <-Header auth-> */
+
+.header-promot {
+    background: url('../img/background-auth.svg') center center / cover no-repeat,
+        var(--primary);
+    opacity: 0.9;
+    background-position-y: -1rem;
+}
+
+
+.text-header p {
+    color: var(--gray-50);
+    font-size: var(--body-2);
+}
+
+.header-form h3 {
+    font-size: var(--heading-3);
+    font-weight: var(--bold-700);
+    color: var(--black);
+    line-height: var(--line-height-30);
+}
+
+.header-form p {
+    font-size: var(--body-1);
+    color: var(--gray-500);
+}
+
+
+/* <-Divider-> */
+.css-divider-area {
+    display: flex;
+    align-items: center;
+    margin: 16px 0 !important;
+}
+
+.css-divider {
+    display: inline-block;
+    border: 0.5px solid var(--gray-2);
+    width: 50%;
+}
+
+.css-text-divider {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: var(--black);
+    padding: 0 16px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+.trial {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--gray-1);
+}
+
+.trial a {
+    color: var(--primary);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Components --> Alert
+*-----------------------------------------------------------------------------------------------
+* Give information about process or flow to users
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.alert {
+    border-radius: 13px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 12px 17px;
+    box-shadow: var(--shadow-2xl);
+}
+
+.text-alert {
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-danger .text-alert small {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.alert-danger .text-alert span {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--gray-1);
+}
+
+
+.bg-icon-alert-danger {
+    background-color: var(--red);
+    border: 3px solid #ee567c;
+}
+
+.bg-icon-alert-success {
+    background-color: #102842;
+    border: 2px solid #38E17C;
+    color: #38E17C;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Status
+*-----------------------------------------------------------------------------------------------
+* Status page styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.card-status {
+    margin-top: -7rem;
+}
+
+.card-status .card {
+    border-radius: 20px;
+}
+
+.card-status .card-body {
+    padding: 28px;
+}
+
+.label-status {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.data-status {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--primary);
+}
+
+.data-status span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.account-login {
+    color: var(--white);
+    margin-top: -14rem;
+}
+
+.user-grett {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--white);
+    font-family: var(--font-headline);
+}
+
+.user-grett .username {
+    font-weight: 300;
+}
+
+.account-login p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: var(--font-headline);
+}
+
+.title-info {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--black)
+}
+
+.bg-info-user {
+    background-color: var(--gray-3);
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.label-info {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--gray-1);
+}
+
+.value-info {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--black);
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* About
+*-----------------------------------------------------------------------------------------------
+* About page styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.card-about {
+    margin-top: -10rem;
+}
+
+.card-about .card-body {
+    padding: 48px;
+}
+
+.card-about .card-body h3 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45px;
+    color: var(--black);
+}
+
+.card-about .card-body .sub {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--gray-1);
+}
+
+.card-about .card-body .desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--black);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Services - services.html
+*-----------------------------------------------------------------------------------------------
+* Services page styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.card-services {
+    margin-top: -8.5rem;
+}
+
+.card-services .card {
+    border-radius: 27px;
+}
+
+.card-services .card-body {
+    padding: 28px;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Package
+*-----------------------------------------------------------------------------------------------
+* Package page styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.card-package .card {
+    border-radius: 27px;
+}
+
+.card-package {
+    margin-top: -14.5rem;
+}
+
+.notif {
+    border-radius: 100px;
+    padding: 0 14px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.type {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--black);
+}
+
+.data {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--primary);
+}
+
+
+.data span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--black);
+    margin: 10px 0;
+    font-family: var(--font-headline);
+}
+
+.feature {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--black);
+    font-family: var(--font-headline);
+}
+
+.feature span {
+    color: var(--yellow);
+}
+
+section.info {
+    background-color: var(--gray-3);
+    border-radius: 23px;
+}
+
+section.info .info-body {
+    display: flex;
+}
+
+section.info h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--black);
+    font-family: var(--font-headline);
+}
+
+section.info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    color: var(--black);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*  Custom Scrollbar
+*-----------------------------------------------------------------------------------------------
+* Custom srollbar style
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(207, 206, 206);
+}
+
+/*------------------------ 
+Scroll out animate
+-----------------------*/
+[data-scroll] {
+    transition: all 2s;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-200px);
+}
+
+
+
+/* Alogin loading */
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.spinner .dot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.spinner .dot::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner .dot {
+    animation: spin 2s infinite;
+}
+
+.spinner .dot:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+.spinner .dot:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+.spinner .dot:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+.spinner .dot:nth-child(5) {
+    animation-delay: 400ms;
+}
+
+.text-alogin h5 {
+    color: var(--slate-900);
+    font-size: var(--emphasized);
+    flex-wrap: var(--bold);
+    line-height: var(--line-height-emphasized);
+}
+
+.text-alogin p {
+    color: var(--slate-500);
+    font-size: var(--body);
+    font-weight: var(--regular);
+    line-height: var(--line-height-body);
+}
+
+.text-alogin a {
+    color: var(--primary);
+    font-weight: var(--bold);
+}
+
+.copy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--gray-1);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Speed Test - speed.html
+*-----------------------------------------------------------------------------------------------
+* Speed page styling
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.card-speed {
+    border-radius: 20px;
+    border: none;
+    background-color: var(--gray-3);
+    height: 41vh;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Responsive
+*-----------------------------------------------------------------------------------------------
+* Restyle for md and xs display
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Custom CSS code */
+/* Styles for screens smaller than 576px (xs) */
+@media (max-width: 575.98px) {
+
+    /* Your CSS rules for mobile devices */
+    section.hero {
+        background: url('../img/circle-bg.png') center center / cover no-repeat,
+            var(--primary);
+        padding: 10rem 0;
+        background-size: contain;
+    }
+
+    .form-action .card-body {
+        padding: 18px 17px;
+    }
+
+    .menu-item {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    .card-about {
+        margin-top: -20rem;
+    }
+
+    .card-about .card-body {
+        padding: 48px;
+    }
+
+    .card-services {
+        margin-top: -11.5rem;
+    }
+
+    section.hero-status {
+        background: var(--primary);
+    }
+
+    section.hero-status .card {
+        margin-top: 4rem;
+    }
+
+    .user-grett {
+        font-size: 20px;
+    }
+
+    .account-login p {
+        font-size: 16px;
+        margin-top: -0.9rem;
+    }
+
+    .tti-md {
+        padding-top: 24px;
+    }
+
+    section.info h5 {
+        font-size: 18px;
+    }
+
+    section.info p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+    }
+
+    section.info .info-body {
+        display: block;
+        padding: 20px;
+    }
+
+    section.info img {
+        display: none;
+    }
+
+}
+
+/* Styles for screens between 576px (sm) and 991.98px (lg) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+
+    /* Your CSS rules for tablets */
+    .menu-item {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    section.hero-status {
+        background: var(--primary);
+    }
+
+    .tti-md {
+        padding-top: 24px;
+    }
+}

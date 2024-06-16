@@ -1,0 +1,163 @@
+@import url('/static/css/main.css');
+
+body {
+    font-family: var(--font-default);
+}
+
+#sc-container {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#sc-basic-link {
+    display: none;
+}
+
+#sc-branding {
+    display: none;
+}
+
+#sc-container {
+    font-family: var(--font-body);
+    /* width: 360px; */
+    height: 272px
+}
+
+div#sc-container * {
+    box-sizing: content-box
+}
+
+#sc-branding {
+    padding-top: 6px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    text-align: center
+}
+
+#sc-test-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 200px;
+    text-align: center
+}
+
+#sc-footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 12px
+}
+
+#sc-footer>a {
+    color: var(--primary);
+    text-decoration: none
+}
+
+.sc-bb {
+    line-height: 1;
+    border-bottom: 1px solid var(--gray-1);
+}
+
+.sc-button {
+    /* max-width: 280px; */
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary);
+    border-radius: 100px;
+    border: 0;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#sc-start-button {
+    margin-top: 77px
+}
+
+.sc-uppercase {
+    text-transform: uppercase
+}
+
+#sc-ctx {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: all .3s ease-in-out
+}
+
+#sc-ctx.sc-is-visible {
+    display: block;
+    height: auto
+}
+
+#sc-ctx.sc-is-visible.sc-is-shown {
+    opacity: 1
+}
+
+#sc-results {
+    display: none;
+    margin-top: 20px;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+    height: 100px; */
+    text-align: center;
+    color: var(--primary);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+#sc-results.sc-is-visible {
+    display: block;
+    height: auto
+}
+
+#sc-results.sc-is-visible.sc-is-shown {
+    opacity: 1
+}
+
+.sc-result>.sc-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.sc-result>.sc-unit {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.sc-result {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+#sc-results-actions {
+    display: none;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    text-align: center
+}
+
+#sc-results-actions.sc-is-visible {
+    display: block;
+    height: auto
+}
+
+#sc-results-actions.sc-is-visible.sc-is-shown {
+    opacity: 1
+}
+
+#sc-details-button {
+    margin-top: 33px
+}
+
+#sc-basic-link {
+    margin-top: 20px;
+    font-size: 13px
+}

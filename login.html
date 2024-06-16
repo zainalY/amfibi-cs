@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title"></title>
+    <meta name="theme-color" content="" id="themeColor" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="" id="favicon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/css-bs-5/bootstrap.min.css">
+    <!-- General CSS -->
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body onload="voucher()">
+
+    $(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post" style="display:none">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+
+    <script src="/md5.js"></script>
+    <script>
+        function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+
+    </script>
+    $(endif)
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="login.html">
+                <img src="static/img/brand/pondenet.svg" alt="">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu text-white">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link menu-item" href="about.html">About us</a>
+                    <a class="nav-link menu-item" href="package.html">Package</a>
+                    <a class="nav-link menu-item" href="services.html">Services</a>
+                </div>
+                <a onclick="redirectToWhatsApp()" class="btn btn-light d-md d-block">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section here -->
+    <section class="hero"></section>
+
+    <!-- Section form -->
+    <section class="form-action container">
+
+        <div class="col-lg-6 col-sm-12 col-md-12 mx-auto">
+            <div class="card shadow-2xl border-0 mt-5 mb-5">
+                <div class="card-body">
+                    <!-- Form login -->
+                    <div class="header-form pt__24 pb__24">
+                        <h3 class="title-header">Login</h3>
+                        <p class="desc-header">Masukkan akun anda dengan benar</p>
+                    </div>
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-pills nav-fill gap-2 p-1 bg-lightgray rounded-5 tabs mb__32" id="pillNav2"
+                        role="tablist"
+                        style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                        <li class="nav-item" role="presentation">
+                            <a href="#target1" id='target1' class="text-decoration-none">
+                                <button class="nav-link tab active rounded-5" id="btnvrc" onclick="voucher();"
+                                    data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Voucher</button>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#target2" id='target2' class="text-decoration-none">
+                                <button class="nav-link tab rounded-5" id="btnmem" onclick="member();"
+                                    data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Member</button>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form name="login" action="$(link-login-only)" method="post" $(if chap-id)
+                        onSubmit="return doLogin()" $(endif)>
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
+
+                        <div class="info" id="infologin"></div>
+                        <!-- Alert -->
+                        $(if error)
+                        <div class="alert alert-danger d-flex align-items-center pt__16" role="alert">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-icon-alert-danger rounded-pill"
+                                style="width: 27px; height: 27px;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_226_3763" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                        y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9" />
+                                    </mask>
+                                    <g mask="url(#mask0_226_3763)">
+                                        <path
+                                            d="M7.99993 8.7L4.6166 12.0833C4.52771 12.1722 4.41393 12.2193 4.27527 12.2247C4.13616 12.2304 4.0166 12.1833 3.9166 12.0833C3.8166 11.9833 3.7666 11.8667 3.7666 11.7333C3.7666 11.6 3.8166 11.4833 3.9166 11.3833L7.29993 8L3.9166 4.61666C3.82771 4.52777 3.7806 4.41377 3.77527 4.27466C3.76949 4.136 3.8166 4.01666 3.9166 3.91666C4.0166 3.81666 4.13327 3.76666 4.2666 3.76666C4.39993 3.76666 4.5166 3.81666 4.6166 3.91666L7.99993 7.3L11.3833 3.91666C11.4722 3.82777 11.5862 3.78044 11.7253 3.77466C11.8639 3.76933 11.9833 3.81666 12.0833 3.91666C12.1833 4.01666 12.2333 4.13333 12.2333 4.26666C12.2333 4.4 12.1833 4.51666 12.0833 4.61666L8.69994 8L12.0833 11.3833C12.1722 11.4722 12.2193 11.586 12.2246 11.7247C12.2304 11.8638 12.1833 11.9833 12.0833 12.0833C11.9833 12.1833 11.8666 12.2333 11.7333 12.2333C11.5999 12.2333 11.4833 12.1833 11.3833 12.0833L7.99993 8.7Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="ps-2 text-alert d-inline-flex align-items-center justify-content-center">
+                                <small>Oh no! <span> $(error)</span></small>
+                            </div>
+                        </div>
+                        $(endif)
+
+                        <!-- Form control -->
+                        <div class="form-group mb__16">
+                            <input name="username" type="text" value="$(username)" placeholder="Username"
+                                class="form-control" required />
+                        </div>
+                        <div class="form-group mb__48" id="ps-fg">
+                            <input name="password" class="form-control" type="password" placeholder="Password"
+                                required />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 ripple">Sign in</button>
+                    </form>
+                    <!-- Text divider -->
+                    <div class="css-divider-area">
+                        <span class="css-divider"></span>
+                        <span class="css-text-divider">Or</span>
+                        <span class="css-divider"></span>
+                    </div>
+                    <!-- Login with QR -->
+                    <button class="btn btn-secondary w-100 p-2 ripple"
+                        onclick="window.location='https://qr.pondenet.com';">
+                        <svg class="me-2 align-items-center justify-content-center" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.59265 9.17231C4.115 9.17231 4.39622 8.88105 4.39622 8.34868V5.97812C4.39622 4.93352 4.95872 4.40115 5.96321 4.40115H8.39398C8.91632 4.40115 9.20762 4.10981 9.20762 3.58751C9.20762 3.07524 8.91632 2.78394 8.39398 2.78394H5.93304C3.8438 2.78394 2.77905 3.81855 2.77905 5.88774V8.34868C2.77905 8.88105 3.07035 9.17231 3.59265 9.17231ZM20.4074 9.17231C20.9397 9.17231 21.2211 8.88105 21.2211 8.34868V5.88774C21.2211 3.81855 20.1764 2.78394 18.067 2.78394H15.6161C15.0837 2.78394 14.7924 3.07524 14.7924 3.58751C14.7924 4.10981 15.0837 4.40115 15.6161 4.40115H18.0469C19.0313 4.40115 19.6038 4.93352 19.6038 5.97812V8.34868C19.6038 8.88105 19.8951 9.17231 20.4074 9.17231ZM11.5681 11.1311V7.62546C11.5681 7.38439 11.3773 7.18348 11.1261 7.18348H7.63061C7.37951 7.18348 7.18862 7.38439 7.18862 7.62546V11.1311C7.18862 11.3721 7.37951 11.563 7.63061 11.563H11.1261C11.3773 11.563 11.5681 11.3721 11.5681 11.1311ZM13.3058 8.05738H15.9375V10.6891H13.3058V8.05738ZM15.1742 9.92569V8.83082H14.0793V9.92569H15.1742ZM9.93084 9.92569V8.83082H8.8259V9.92569H9.93084ZM8.06252 13.3107H10.6942V15.9424H8.06252V13.3107ZM16.6808 13.6523V12.5574H15.586V13.6523H16.6808ZM13.6574 13.6523V12.5574H12.5625V13.6523H13.6574ZM9.93084 15.169V14.0741H8.8259V15.169H9.93084ZM15.1742 15.169V14.0741H14.0692V15.169H15.1742ZM15.6161 21.2158H18.067C20.1764 21.2158 21.2211 20.1712 21.2211 18.102V15.6511C21.2211 15.1188 20.9298 14.8275 20.4074 14.8275C19.8851 14.8275 19.6038 15.1188 19.6038 15.6511V18.0217C19.6038 19.0663 19.0313 19.5987 18.0469 19.5987H15.6161C15.0837 19.5987 14.7924 19.89 14.7924 20.4123C14.7924 20.9245 15.0837 21.2158 15.6161 21.2158ZM5.93304 21.2158H8.39398C8.91632 21.2158 9.20762 20.9245 9.20762 20.4123C9.20762 19.89 8.91632 19.5987 8.39398 19.5987H5.96321C4.95872 19.5987 4.39622 19.0663 4.39622 18.0217V15.6511C4.39622 15.1188 4.10492 14.8275 3.59265 14.8275C3.06028 14.8275 2.77905 15.1188 2.77905 15.6511V18.102C2.77905 20.1812 3.8438 21.2158 5.93304 21.2158ZM13.6574 16.6857V15.5908H12.5625V16.6857H13.6574ZM16.6808 16.6857V15.5908H15.586V16.6857H16.6808ZM16.8114 11.1311V7.62546C16.8114 7.38439 16.6205 7.18348 16.3694 7.18348H12.8739C12.6228 7.18348 12.4319 7.38439 12.4319 7.62546V11.1311C12.4319 11.3721 12.6228 11.563 12.8739 11.563H16.3694C16.6205 11.563 16.8114 11.3721 16.8114 11.1311ZM8.06252 8.05738H10.6942V10.6891H8.06252V8.05738ZM11.5681 16.3743V12.8688C11.5681 12.6277 11.3773 12.4369 11.1261 12.4369H7.63061C7.37951 12.4369 7.18862 12.6277 7.18862 12.8688V16.3743C7.18862 16.6154 7.37951 16.8163 7.63061 16.8163H11.1261C11.3773 16.8163 11.5681 16.6154 11.5681 16.3743Z"
+                                fill="#1E2022" />
+                        </svg>
+
+                        Sign In with QR
+                    </button>
+
+                    <!-- Login trial -->
+                    $(if trial)
+                    <div class="trial text-center mt__32 mb__32">
+                        Mau coba WIFI gratis klik
+                        <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"
+                            class="fw-bold text-decoration-none">disini</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copy -->
+    <div class="text-center container mb__48 pt__18">
+        <p class="copy">© 2023 Pondenet. All Rights Reserved</p>
+    </div>
+
+    <!-- Library JS -->
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="static/js/js-bs-5/bootstrap.min.js"></script>
+    <!-- General JS -->
+    <script src="static/js/app.js"></script>
+    <script type="text/javascript">
+        var hostname = window.location.hostname;
+        var usernameLabel = document.getElementById('username-label');
+        var passwordLabel = document.getElementById('password-label');
+
+        document.getElementById('title').innerHTML = hostname + " > login";
+
+        document.login.username.focus();
+
+        var infologin = document.getElementById('infologin');
+        infologin.innerHTML = "Masukkan Kode Voucher<br>kemudian klik Connect";
+
+        // login page 2 
+        var username = document.login.username;
+        var password = document.login.password;
+
+        username.placeholder = "Kode Voucher";
+
+        // set password = username
+        function setpass() {
+            var user = username.value
+            //user = user.toLowerCase();
+            username.value = user;
+            password.value = user;
+        }
+
+        username.onkeyup = setpass;
+
+        // change to voucher mode
+        function voucher() {
+            username.focus();
+            username.onkeyup = setpass;
+            username.placeholder = "Kode Voucher";
+            password.type = "hidden";
+            infologin.innerHTML = "";
+            usernameLabel.textContent = "Kode Voucher"; // set label text
+            passwordLabel.textContent = ""; // set label text
+
+            var passwordInput = document.getElementById('ps-fg');
+            passwordInput.classList.remove('mb__48');
+            passwordInput.classList.add('mb__2');
+
+        }
+
+        // change to member mode
+        function member() {
+            username.focus();
+            username.onkeyup = "";
+            username.placeholder = "Username";
+            password.type = "password";
+            infologin.innerHTML = "";
+            usernameLabel.textContent = "Username"; // set label text
+            passwordLabel.textContent = "Password"; // set label text
+
+            var passwordInput = document.getElementById('ps-fg');
+            passwordInput.classList.remove('mb__16');
+            passwordInput.classList.add('mb__48');
+
+        }
+    </script>
+
+</body>
+
+</html>

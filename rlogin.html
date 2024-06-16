@@ -1,0 +1,33 @@
+﻿$(if http-status == 302)Hotspot login required$(endif)
+$(if http-header == "Location")$(link-redirect)$(endif)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="title"></title>
+  <meta name="theme-color" content="" id="themeColor" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="" id="favicon">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="static/css/css-bs-5/bootstrap.min.css">
+  <!-- General CSS -->
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+
+
+
+  <!-- Library JS -->
+  <script src="static/js/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="static/js/js-bs-5/bootstrap.min.js"></script>
+  <!-- General JS -->
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
